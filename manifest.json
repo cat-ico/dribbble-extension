@@ -4,8 +4,6 @@
   "author": "Catico",
   "manifest_version": 2,
   "description": "Show large shot preview on hover. Supports images, gifs and videos.",
-  "permissions": ["tabs"],
-  "background": { "scripts": ["hot-reload.js"] },
   "content_scripts": [
     {
       "js": ["content.js"],
