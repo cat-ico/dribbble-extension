@@ -43,10 +43,11 @@ body.addEventListener('mousemove', (e) => {
   if (target.id === 'dsh-icon') {
     return showPreview()
   }
-  if (target.classList.contains('dribbble-over')) {
+  const shot = target.closest('.dribbble')
+  if (shot) {
     preview.innerHTML = ''
     iconShot = null
-    currentShot = target.closest('.dribbble')
+    currentShot = shot
     currentShot.appendChild(icon)
     return
   }
