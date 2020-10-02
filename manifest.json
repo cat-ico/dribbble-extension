@@ -1,6 +1,6 @@
 {
   "name": "Dribbble shot hover preview",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Catico",
   "manifest_version": 2,
   "description": "Show large shot preview on hover. Supports images, gifs and videos.",
