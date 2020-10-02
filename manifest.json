@@ -1,14 +1,20 @@
 {
   "name": "Dribbble shot hover preview",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Catico",
   "manifest_version": 2,
   "description": "Show large shot preview on hover. Supports images, gifs and videos.",
   "content_scripts": [
     {
-      "js": ["content.js"],
-      "css": ["content.css"],
-      "matches": ["https://dribbble.com/*"]
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "matches": [
+        "https://dribbble.com/*"
+      ]
     }
   ],
   "icons": {
@@ -17,5 +23,7 @@
     "48": "img/icon48.png",
     "128": "img/icon128.png"
   },
-  "web_accessible_resources": ["img/webIcon.svg"]
+  "web_accessible_resources": [
+    "img/webIcon.svg"
+  ]
 }

@@ -28,7 +28,7 @@ const showPreview = () => {
     })
     return
   }
-  const picUrl = currentShot.querySelector('picture source').srcset.replace('_still_2x', '')
+  const picUrl = currentShot.querySelector('img').srcset.replace('_still_2x', '')
   const img = document.createElement('img')
   img.src = picUrl
   img.onload = () => {
