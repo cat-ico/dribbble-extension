@@ -55,6 +55,4 @@ body.addEventListener('mousemove', (e) => {
   currentShot && currentShot.removeChild(icon)
   currentShot = null
   iconShot = null
-  img.src = undefined
-  video.src = undefined
 })
