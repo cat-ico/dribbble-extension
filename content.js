@@ -11,12 +11,13 @@ icon.appendChild(svg)
 
 let currentShot = null
 let iconShot = null
+let img = document.createElement('img')
+let video = document.createElement('video')
 
 const showPreview = () => {
   iconShot = currentShot
   const videoURL = iconShot.getAttribute('data-video-teaser-xlarge')
   if (videoURL) {
-    const video = document.createElement('video')
     video.src = videoURL
     video.autoplay = true
     video.loop = true
@@ -28,8 +29,7 @@ const showPreview = () => {
     })
     return
   }
-  const picUrl = currentShot.querySelector('img').getAttribute('data-srcset').replace('_still_2x', '')
-  const img = document.createElement('img')
+  const picUrl = currentShot.querySelector('img').getAttribute('src').split('&')[0] + '&resize=1200x900'
   img.src = picUrl
   img.onload = () => {
     preview.innerHTML = ''
@@ -55,4 +55,6 @@ body.addEventListener('mousemove', (e) => {
   currentShot && currentShot.removeChild(icon)
   currentShot = null
   iconShot = null
+  img.src = undefined
+  video.src = undefined
 })
