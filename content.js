@@ -13,10 +13,12 @@ let currentShot = null
 let iconShot = null
 let img = document.createElement('img')
 let video = document.createElement('video')
+let showingPreview = false
 
 const showPreview = () => {
   iconShot = currentShot
   const videoURL = iconShot.getAttribute('data-video-teaser-xlarge')
+  console.log("TCL:: showPreview -> videoURL", videoURL)
   if (videoURL) {
     video.src = videoURL
     video.autoplay = true
@@ -41,7 +43,11 @@ const showPreview = () => {
 body.addEventListener('mousemove', (e) => {
   const target = e.target
   if (target.id === 'dsh-icon') {
+    if (showingPreview) return
+    showingPreview = true
     return showPreview()
+  } else {
+    showingPreview = false
   }
   const shot = target.closest('.dribbble')
   if (shot) {
